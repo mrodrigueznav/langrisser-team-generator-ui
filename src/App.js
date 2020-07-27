@@ -1,23 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import CharacterGroupByFaction from './components/characterGroupByFaction'
+
+const charactersByFaction = [
+  {
+    faction: 'Legion of Glory',
+    characters: [
+      { name: 'Elwin' },
+      { name: 'Ledin' }
+    ]
+  },
+  {
+    faction: 'Empire',
+    characters: [
+      { name: 'Elwin' }
+    ]
+  },
+  {
+    faction: 'Princess Alliance',
+    characters: [
+      { name: 'Sophia' }
+    ]
+  },
+]
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <CharacterGroupByFaction
+        factions={charactersByFaction}/>
       </header>
     </div>
   );
